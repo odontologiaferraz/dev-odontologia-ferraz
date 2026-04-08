@@ -627,8 +627,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-logo-wrapper {
-    width: 90px;
-    height: 90px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     overflow: hidden;
     background-color: white;
@@ -638,7 +638,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-logo-wrapper img {
-    width: 140%; /* Super zoom in para cortar toda a borda branca original do JPG */
+    width: 170%; /* Aumentado para remover a borda branca */
     height: auto;
     object-fit: cover;
 }
