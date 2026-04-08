@@ -638,7 +638,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-logo-wrapper img {
-    width: 170%; /* Aumentado para remover a borda branca */
+    width: 270%; /* Muito mais zoom para invadir totalmente a borda branca */
     height: auto;
     object-fit: cover;
 }
