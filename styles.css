@@ -316,7 +316,7 @@ h1, h2, h3, h4, h5, h6 {
    ABOUT SECTION
 ======================================================================== */
 .about {
-    background: var(--bg-white);
+    background: var(--bg-gray);
 }
 
 .about-container {
@@ -400,7 +400,7 @@ h1, h2, h3, h4, h5, h6 {
    SPECIALTIES SECTION
 ======================================================================== */
 .specialties {
-    background: linear-gradient(to right, var(--primary-dark), var(--primary-color));
+    background: var(--bg-white);
 }
 
 .specialties-grid {
@@ -415,28 +415,59 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid rgba(0,0,0,0.05);
     padding: 40px 30px;
     border-radius: 24px;
-    text-align: center;
-    box-shadow: var(--shadow-sm);
+    text-align: left;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.spec-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: var(--primary-color);
     transition: var(--transition);
 }
 
 .spec-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--primary-light);
+    box-shadow: var(--shadow-md);
+    border-color: transparent;
 }
 
-.spec-card i {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    display: inline-block;
+.spec-card:hover::after {
+    width: 100%;
+}
+
+.spec-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-color);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
     transition: var(--transition);
 }
 
-.spec-card:hover i {
-    color: var(--secondary-color);
-    transform: scale(1.1);
+.spec-card:hover .spec-icon-wrapper {
+    background: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.spec-icon-wrapper i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.spec-card:hover .spec-icon-wrapper i {
+    color: white;
 }
 
 .spec-card h4 {
